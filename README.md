@@ -10,3 +10,5 @@ This repo contains the schematic, code, and 3D print file to build a simple temp
 
 ![alt text](https://github.com/samdojo/temp_reader/blob/main/board_with_components.jpg)
 
+#### Dependencies
+- Arduino library "adafruit_AM2320" v1.2.1

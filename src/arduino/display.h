@@ -46,7 +46,7 @@ struct Display {
       case 9: print_9(digit); break;
       default: print_error(digit); break;
     }
-    delay(10);
+    delay(5);
   }
 
 private:

@@ -3,19 +3,19 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "(6.0.11)"
+      "Version": "7.0.1-3b83917a11~171~ubuntu22.04.1"
     },
-    "CreationDate": "2023-02-07T12:56:04-07:00"
+    "CreationDate": "2023-03-18T14:24:16-06:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
-      "Name": "temp_changer",
-      "GUID": "74656d70-5f63-4686-916e-6765722e6b69",
+      "Name": "temp_reader",
+      "GUID": "74656d70-5f72-4656-9164-65722e6b6963",
       "Revision": "rev?"
     },
     "Size": {
-      "X": 72.49,
-      "Y": 55.98
+      "X": 54.6,
+      "Y": 53.1
     },
     "LayerNumber": 2,
     "BoardThickness": 1.6,
@@ -32,37 +32,37 @@
   ],
   "FilesAttributes": [
     {
-      "Path": "temp_changer-F_Cu.gbr",
+      "Path": "temp_reader-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "temp_changer-B_Cu.gbr",
+      "Path": "temp_reader-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "temp_changer-F_Silkscreen.gbr",
+      "Path": "temp_reader-F_Silkscreen.gbr",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "temp_changer-B_Silkscreen.gbr",
+      "Path": "temp_reader-B_Silkscreen.gbr",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "temp_changer-F_Mask.gbr",
+      "Path": "temp_reader-F_Mask.gbr",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "temp_changer-B_Mask.gbr",
+      "Path": "temp_reader-B_Mask.gbr",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "temp_changer-Edge_Cuts.gbr",
+      "Path": "temp_reader-Edge_Cuts.gbr",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }
