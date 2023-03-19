@@ -1343,6 +1343,31 @@
     )
   )
 
+  (symbol (lib_id "power:+3.3V") (at 138.43 57.15 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 8840ffc5-b0e4-4d82-bc0f-27b43849c009)
+    (property "Reference" "#PWR01" (at 138.43 53.34 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 138.43 57.15 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "" (at 138.43 57.15 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 138.43 57.15 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 39e14652-140b-492b-8794-dfc3fe591da8))
+    (instances
+      (project "temp_reader"
+        (path "/fa83d0dc-8fb2-450b-af06-da96bef65c78"
+          (reference "#PWR01") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "MCU_Module:Arduino_Nano_Every") (at 62.23 60.96 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8b93b148-d1ce-4940-8010-431392298b76)
@@ -1392,31 +1417,6 @@
       (project "temp_reader"
         (path "/fa83d0dc-8fb2-450b-af06-da96bef65c78"
           (reference "A1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+5V") (at 138.43 57.15 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 9e6d75b0-7653-4771-81cc-c80cc20747f5)
-    (property "Reference" "#PWR01" (at 138.43 53.34 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V" (at 138.43 57.15 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "" (at 138.43 57.15 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 138.43 57.15 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 5eabe59f-b56b-42da-93b3-57adbe41ef03))
-    (instances
-      (project "temp_reader"
-        (path "/fa83d0dc-8fb2-450b-af06-da96bef65c78"
-          (reference "#PWR01") (unit 1)
         )
       )
     )
