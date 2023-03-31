@@ -1,2 +1,3 @@
 schematics/temp_reader-backups/
 schematics/_autosave-*
+schematics/fp-info-cache

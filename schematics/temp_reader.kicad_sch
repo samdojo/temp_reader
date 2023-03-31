@@ -1011,7 +1011,7 @@
     (property "Reference" "U5" (at 53.34 91.44 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "MG90S_servo" (at 48.26 88.9 0)
+    (property "Value" "SG90_servo" (at 48.26 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Library:MG90S servo" (at 54.61 92.71 0)
