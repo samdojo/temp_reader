@@ -1,13 +1,12 @@
 #include "display.h"
 #include "Adafruit_Sensor.h"
 #include "Adafruit_AM2320.h"
+#include <Servo.h>
 
-#define SERVO_CTRL 0
 
-int pins[] = { SERVO_CTRL,
-             };
-
+Servo servo;
 Adafruit_AM2320 tempSensor = Adafruit_AM2320();
+
 int tempBy10;
 int tick = 0;
 
@@ -20,10 +19,16 @@ void setup() {
 
   Display::init();
   tempSensor.begin();
+  servo.attach(9); // PIN 9
+  servo.write(0);
 
-  for (int pin : pins) {
-    pinMode(pin, OUTPUT);
+/*
+  delay(1000);
+  for (int i = 0; i <= 90; ++i) {
+    servo.write(i);
+    delay(50);
   }
+*/
 }
 
 double inline celsius_to_farenheit(double celsius) {

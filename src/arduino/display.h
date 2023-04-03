@@ -13,9 +13,9 @@ struct Display {
   };
 
   typedef enum Digit {
-    DIGIT_10s = 11,
+    DIGIT_10ths = 11,
     DIGIT_1s = 12,
-    DIGIT_10ths = 13
+    DIGIT_10s = 13
   };
 
   static void init() {
