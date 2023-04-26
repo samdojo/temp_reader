@@ -9,6 +9,7 @@ Adafruit_AM2320 tempSensor = Adafruit_AM2320();
 
 int tempBy10;
 int tick = 0;
+bool down = true;
 
 void setup() {
   Serial.begin(9600);
@@ -20,15 +21,7 @@ void setup() {
   Display::init();
   tempSensor.begin();
   servo.attach(9); // PIN 9
-  servo.write(0);
-
-/*
-  delay(1000);
-  for (int i = 0; i <= 90; ++i) {
-    servo.write(i);
-    delay(50);
-  }
-*/
+  servo.write(90);
 }
 
 double inline celsius_to_farenheit(double celsius) {
@@ -42,6 +35,15 @@ void loop() {
     tempBy10 = (10.0 * celsius_to_farenheit(tempSensor.readTemperature()) + 0.5);
     Serial.print("Temp: ");
     Serial.println(float(tempBy10) / 10.0);
+
+    if (tempBy10 < 720 && down) {
+      servo.write(0);
+      down = false;
+    }
+    else if (tempBy10 > 720 && !down) {
+      servo.write(90);
+      down = true;
+    }
   }
 
   Display::print_digit(tempBy10 / 100, Display::Digit::DIGIT_10s);
