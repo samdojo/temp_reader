@@ -7,6 +7,8 @@
 Servo servo;
 Adafruit_AM2320 tempSensor = Adafruit_AM2320();
 
+constexpr bool HEAT_MODE = false;
+
 int tempBy10;
 int tick = 0;
 bool down = true;
@@ -36,13 +38,25 @@ void loop() {
     Serial.print("Temp: ");
     Serial.println(float(tempBy10) / 10.0);
 
-    if (tempBy10 < 720 && down) {
-      servo.write(0);
-      down = false;
+    if (HEAT_MODE) {
+      if (tempBy10 < 720 && down) {
+        servo.write(0);
+        down = false;
+      }
+      else if (tempBy10 > 720 && !down) {
+        servo.write(90);
+        down = true;
+      }
     }
-    else if (tempBy10 > 720 && !down) {
-      servo.write(90);
-      down = true;
+    else {
+      if (tempBy10 < 720 && down) {
+        servo.write(90);
+        down = true;
+      }
+      else if (tempBy10 > 720 && !down) {
+        servo.write(0);
+        down = false;
+      }
     }
   }
 
