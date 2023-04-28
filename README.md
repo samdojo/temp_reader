@@ -20,3 +20,7 @@ This repo contains the schematic, code, and 3D print file to build a simple temp
 - 3 NPN Transistors (2N3904)
 - 2 pull-up resistors (2.2-10KOhm)
 - Servo (SG90)
+- 4 female-to-female jumper wires
+- 5 #2 1/4" screws
+- glue
+
