@@ -1,17 +1,13 @@
 #include "display.h"
 #include "Adafruit_Sensor.h"
 #include "Adafruit_AM2320.h"
-#include <Servo.h>
+#include "arm.h"
 
-
-Servo servo;
+Arm arm;
 Adafruit_AM2320 tempSensor = Adafruit_AM2320();
-
-constexpr bool HEAT_MODE = false;
 
 int tempBy10;
 int tick = 0;
-bool down = true;
 
 void setup() {
   Serial.begin(9600);
@@ -22,8 +18,6 @@ void setup() {
 
   Display::init();
   tempSensor.begin();
-  servo.attach(9); // PIN 9
-  servo.write(90);
 }
 
 double inline celsius_to_farenheit(double celsius) {
@@ -38,25 +32,11 @@ void loop() {
     Serial.print("Temp: ");
     Serial.println(float(tempBy10) / 10.0);
 
-    if (HEAT_MODE) {
-      if (tempBy10 < 720 && down) {
-        servo.write(0);
-        down = false;
-      }
-      else if (tempBy10 > 720 && !down) {
-        servo.write(90);
-        down = true;
-      }
+    if (tempBy10 < 740 && arm.isDown()) {
+      arm.goUp();
     }
-    else {
-      if (tempBy10 < 720 && down) {
-        servo.write(90);
-        down = true;
-      }
-      else if (tempBy10 > 720 && !down) {
-        servo.write(0);
-        down = false;
-      }
+    else if (tempBy10 > 740 && !arm.isDown()) {
+      arm.goDown();
     }
   }
 
